@@ -68,19 +68,15 @@ PM_START_TEX = """
 buttons = [
     [
         InlineKeyboardButton(
-            text="Aᴅᴅ ᴍᴇ ɪɴ ʏᴏᴜʀ ɢʀᴏᴜᴘ", url=f"t.me/{BOT_USERNAME}?startgroup=new"
+            text="𝐒ᴜᴍᴍᴏɴ 𝐌ᴇ", url=f"t.me/{BOT_USERNAME}?startgroup=new"
         ),
     ],
-    [
-        InlineKeyboardButton(text=f"Hᴇʟᴩ & Cᴏᴍᴍᴀɴᴅs", callback_data="help_back"),
-    ],
     [   
-        InlineKeyboardButton(text="Dᴇᴠᴇʟᴏᴘᴇʀ", url=f"tg://user?id={OWNER_ID}"),
-        InlineKeyboardButton(text=f"Sᴜᴩᴩᴏʀᴛ", url=f"https://t.me/{SUPPORT_CHAT}"),
+        InlineKeyboardButton(text="𝐃ᴇᴠ", url=f"tg://user?id={OWNER_ID}"),
+        InlineKeyboardButton(text=f"𝐔ᴘᴅᴀᴛᴇs", url=f"https://t.me/{SUPPORT_CHAT}"),
     ],
     [  
-        InlineKeyboardButton(text="Aʙᴏᴜᴛ", callback_data="AXB_"),
-        InlineKeyboardButton(text=f"Sᴛᴀᴛs", callback_data="stats_callback"),
+        InlineKeyboardButton(text=f"𝐂ᴏᴍᴍᴀɴᴅs", callback_data="help_back"),
     ],
 ]
 
@@ -264,12 +260,6 @@ def start(update: Update, context: CallbackContext):  # sourcery no-metrics
             lol = update.effective_message.reply_text(
                 PM_START_TEX.format(usr.first_name), parse_mode=ParseMode.MARKDOWN
             )
-            time.sleep(0.4)
-            lol.edit_text("🎊")
-            time.sleep(0.5)
-            lol.edit_text("⚡")
-            time.sleep(0.3)
-            lol.edit_text("ꜱᴛᴀʀᴛɪɴɢ... ")
             time.sleep(0.4)
             lol.delete()
             update.effective_message.reply_text(
